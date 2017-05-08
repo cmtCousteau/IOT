@@ -16,17 +16,16 @@ def on_close(ws):
 
 def on_open(ws):
     def run(*args):
-        for i in range(3):
-            time.sleep(1)
-            ws.send("Hello %d" % i)
         time.sleep(1)
-        ws.close()
-        print "thread terminating..."
+        ws.send("Hello %d" % i)
+        #time.sleep(1)
+        #ws.close()
+        #print "thread terminating..."
     thread.start_new_thread(run, ())
 
 
 websocket.enableTrace(True)
-ws = websocket.WebSocketApp("ws://echo.websocket.org/",
+ws = websocket.WebSocketApp("ws://10.4.215.115/api/subscriptions",
 						  on_message = on_message,
 						  on_error = on_error,
 						  on_close = on_close)
