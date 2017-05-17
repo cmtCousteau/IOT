@@ -1,0 +1,5 @@
+via le lien : http://10.4.215.115/#/liveview
+pour regarder les évenènemens : 
+pour ws : ws://10.4.215.115/api/subscriptions
+et pour la Request : 
+{"messageType":"Subscription","subscription":{"type":"Event","action":"Subscribe"}}
